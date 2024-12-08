@@ -11,10 +11,10 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 // Rutas
-app.get('/', (req, res) => {
+app.get('/home', (req, res) => {
   res.render('index', { title: 'Mi Proyecto', body: ''});
 });
-app.get('/price-type', (req, res) => {
+app.get('/', (req, res) => {
   res.render('price-type', { 
     title: 'Tipos de Precios', body: '' 
   });
