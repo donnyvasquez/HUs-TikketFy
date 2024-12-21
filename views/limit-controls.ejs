@@ -18,7 +18,7 @@
                   </div>
                   <div id="limitValueContainer" class="mt-3 d-none">
                       <label for="limitValue" class="form-label">Set Limit Value</label>
-                      <input type="number" class="form-control" id="limitValue" min="1" placeholder="Enter limit value">
+                      <input type="number" class="form-control form-control form-control-sm" id="limitValue" min="1" placeholder="Enter limit value">
                   </div>
 
                   <!-- Enable Date Controls -->
@@ -27,7 +27,9 @@
                       <label class="form-check-label" for="enableDateControls">Enable Date Controls</label>
                   </div>
                   <div id="dateControlOptions" class="mt-3 d-none">
-                      <select class="form-select" id="dateType" onchange="handleDateTypeChange(this)">
+                    <div class="row">
+                      <div class="col">
+                        <select class="form-select form-select-sm" id="dateType" onchange="handleDateTypeChange(this)">
                           <option value="">Select Date Type</option>
                           <option value="event">Event Date</option>
                           <option value="dynamic">Dynamic Date</option>
@@ -36,15 +38,21 @@
                         <div class="row">
                           <div class="col">
                             <label for="eventDate" class="form-label">Date</label>
-                            <input type="date" id="eventDate" class="form-control">
+                            <input type="date" id="eventDate" class="form-control form-control-sm">
                           </div>
                           <div class="col">
                             <label for="eventTime" class="form-label">Time</label>
-                            <input type="time" id="eventTime" class="form-control">
+                            <input type="time" id="eventTime" class="form-control form-control-sm">
                           </div>
                         </div>
                       </div>
-                      <button id="dynamicDateButton" class="btn btn-sm btn-primary mt-3 d-none" data-bs-toggle="modal" data-bs-target="#dynamicDateModal"><i class="bi bi-plus-lg"></i> Add Dynamic dates</button>
+                      </div>
+                      <div id="dynamicDateButton" class="col d-none justify-content-end">
+                        <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#dynamicDateModal"><i class="bi bi-plus-lg"></i> Add Dynamic dates</button>
+                      </div>
+                    </div>
+                      
+                      
                   </div>
 
                   <!-- Data List -->
@@ -72,11 +80,11 @@
             <div class="row">
               <div class="col">
                   <label for="startDate" class="form-label">Start Date</label>
-                  <input type="date" id="startDate" class="form-control">
+                  <input type="date" id="startDate" class="form-control form-control-sm">
               </div>
               <div class="col">
                   <label for="endDate" class="form-label">End Date</label>
-                  <input type="date" id="endDate" class="form-control">
+                  <input type="date" id="endDate" class="form-control form-control-sm">
               </div>
             </div>
               <div class="form-check form-switch mt-3">
