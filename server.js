@@ -3,10 +3,10 @@ const path = require('path');
 
 const app = express();
 
-// ConfiguraciÛn para servir archivos est·ticos desde la carpeta 'css' y 'scss'
+// Configuraci√≥n para servir archivos est√°ticos desde la carpeta 'css' y 'scss'
 app.use(express.static(path.join(__dirname, 'dist')));
 
-// AquÌ configuras la vista de tu motor EJS
+// Aqu√≠ configuras la vista de tu motor EJS
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
@@ -14,9 +14,14 @@ app.set('views', path.join(__dirname, 'views'));
 app.get('/home', (req, res) => {
   res.render('index', { title: 'Mi Proyecto', body: ''});
 });
-app.get('/', (req, res) => {
+app.get('/price-type', (req, res) => {
   res.render('price-type', { 
     title: 'Tipos de Precios', body: '' 
+  });
+});
+app.get('/', (req, res) => {
+  res.render('limit-controls', { 
+    title: 'Controles y l√≠mites', body: '' 
   });
 });
 // Iniciar el servidor

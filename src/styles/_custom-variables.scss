@@ -70,3 +70,10 @@ $table-hover-bg: rgba(49, 130, 206, 0.1);
 $card-border-radius: 0.5rem;
 $card-border-color: rgba(0, 0, 0, 0.1);
 $card-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+
+$form-switch-width:               3em;
+$form-switch-padding-start:       $form-switch-width + .5em;
+.form-switch .form-check-input {
+  padding-block: 0.5rem;
+  margin-block-start: 0rem;
+}
