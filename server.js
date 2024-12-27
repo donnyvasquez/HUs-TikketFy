@@ -8,7 +8,7 @@ app.use(express.static(path.join(__dirname, 'dist')));
 
 // Aquí configuras la vista de tu motor EJS
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
+//app.set('views', path.join(__dirname, './views'));
 
 // Rutas
 app.get('/home', (req, res) => {
@@ -21,7 +21,12 @@ app.get('/price-type', (req, res) => {
 });
 app.get('/', (req, res) => {
   res.render('limit-controls', { 
-    title: 'Controles y límites', body: '' 
+    title: 'Controles y límites', body: '/views/limit-controls.ejs' 
+  });
+});
+app.get('/product-display', (req, res) => {
+  res.render('product-display', {
+  title: 'Controles y límites', body: '/views/product-display'
   });
 });
 // Iniciar el servidor
