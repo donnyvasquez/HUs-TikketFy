@@ -11,7 +11,7 @@ app.set('view engine', 'ejs');
 //app.set('views', path.join(__dirname, './views'));
 
 // Rutas
-app.get('/home', (req, res) => {
+app.get('/', (req, res) => {
   res.render('index', { title: 'Mi Proyecto', body: ''});
 });
 app.get('/price-type', (req, res) => {
@@ -19,7 +19,7 @@ app.get('/price-type', (req, res) => {
     title: 'Tipos de Precios', body: '' 
   });
 });
-app.get('/', (req, res) => {
+app.get('/limit-controls', (req, res) => {
   res.render('limit-controls', { 
     title: 'Controles y límites', body: '/views/limit-controls.ejs' 
   });
